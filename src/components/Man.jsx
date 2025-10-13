@@ -1,0 +1,132 @@
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
+
+export function Man(props) {
+  const { nodes, materials } = useGLTF('/models/train_tunnel.glb')
+  return (
+    <group {...props} dispose={null}>
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={11.116}>
+        <group rotation={[Math.PI / 2, 0, 0]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_13.geometry}
+            material={materials.lambert1}
+            position={[0.007, 0.063, 0.026]}
+            rotation={[-0.032, -0.006, 0.004]}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_1.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_2.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_3.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_4.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_5.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_6.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_7.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_8.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_9.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_10.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_11.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_12.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_14.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_15.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_16.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_17.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.trainMeshFrames_lambert1_0_18.geometry}
+            material={materials.lambert1}
+          />
+        </group>
+      </group>
+    </group>
+  )
+}
+
+useGLTF.preload('/models/train_tunnel.glb')
