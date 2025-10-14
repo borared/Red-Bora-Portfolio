@@ -2,9 +2,8 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import View from "../components/ViewMore";
 import NaekDetail from "../components/NaekDetail";
-import qoute from "../asset/qoute.jpg";
-import CocaUI122 from "../asset/CocaUI122.jpg";
-import IrishWreckk from "../asset/IrishWreckk.jpg";
+
+
 
 const Work = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,7 +106,7 @@ const Work = () => {
             id="Work"
           >
             <img
-              src={qoute}
+              src="/logo/qoute.jgp"
               alt="Qoute"
               style={{
                 width: "250px",
@@ -212,7 +211,7 @@ const Work = () => {
             id="naek"
           >
             <img
-              src={CocaUI122}
+              src="/logo/CocaUI122.jpg"
               style={{
                 width: "800px",
                 height: "403px",
@@ -230,7 +229,7 @@ const Work = () => {
             id="naek"
           >
             <img
-              src={IrishWreckk}
+              src="/logo/IrishWreckk.jpg"
               style={{
                 width: "800px",
                 margin: "0 auto",
