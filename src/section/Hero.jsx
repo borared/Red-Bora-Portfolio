@@ -1,6 +1,7 @@
 import React from "react";
 import { FlipWords } from "../components/FlipWords";
 import { motion } from "framer-motion";
+import videoHeroo from "../asset/videoHeroo.mp4";
 
 
 const Hero = () => {
@@ -43,7 +44,7 @@ const Hero = () => {
         preload="auto"
         style={{ willChange: "opacity" }}
       >
-        <source src="/dist/video/videoHeroo.mp4" type="" />
+        <source src={videoHeroo} type="" />
       </video>
       {/* dark overlay for readability */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none -z-5" />

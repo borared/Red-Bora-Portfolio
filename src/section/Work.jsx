@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import View from "../components/ViewMore";
 import NaekDetail from "../components/NaekDetail";
+import qoute from "../asset/qoute.jpg";
+import CocaUI122 from "../asset/CocaUI122.jpg";
+import IrishWreckk from "../asset/IrishWreckk.jpg";
 
 const Work = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +13,6 @@ const Work = () => {
   const workRef = useRef(null);
   const posterRef = useRef(null);
   const posterImgRef = useRef(null);
-  const posterTextRef = useRef(null);
   const uxuiRef = useRef(null);
   const uxuiImgRef = useRef(null);
   const detailRef = useRef(null);
@@ -105,7 +107,7 @@ const Work = () => {
             id="Work"
           >
             <img
-              src="/logo/Qoute (1).jpg"
+              src={qoute}
               alt="Qoute"
               style={{
                 width: "250px",
@@ -210,7 +212,7 @@ const Work = () => {
             id="naek"
           >
             <img
-              src="/logo/Coca UI122.jpg"
+              src={CocaUI122}
               style={{
                 width: "800px",
                 height: "403px",
@@ -228,7 +230,7 @@ const Work = () => {
             id="naek"
           >
             <img
-              src="/dist/logo/IrishWreckk.jpg"
+              src={IrishWreckk}
               style={{
                 width: "800px",
                 margin: "0 auto",

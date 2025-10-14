@@ -1,7 +1,0 @@
-node_modules
-video/**
-public/models/**
-.vscode
-.DS_Store
-dist
-*.log
