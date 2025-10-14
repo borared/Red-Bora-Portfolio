@@ -106,7 +106,7 @@ const Work = () => {
             id="Work"
           >
             <img
-              src="/logo/qoute.jgp"
+              src="/logo/qoute.jpg"
               alt="Qoute"
               style={{
                 width: "250px",

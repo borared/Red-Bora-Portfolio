@@ -23,7 +23,7 @@ const NaekDetail = ({ onClose }) => {
         transition={{ duration: 0.4 }}
       >
         {/* Close button */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 z-[60]">
           <button
             onClick={onClose}
             className="flex cursor-pointer text-neutral-500 hover:text-white focus:outline-none relative w-6 h-6"
