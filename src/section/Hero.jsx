@@ -43,7 +43,7 @@ const Hero = () => {
         preload="auto"
         style={{ willChange: "opacity" }}
       >
-        <source src="/public/video/videoHeroo.mp4" type="video/mp4" />
+        <source src="public/video/videoHeroo.mp4" type="" />
       </video>
       {/* dark overlay for readability */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none -z-5" />
