@@ -1,8 +1,7 @@
 import React from "react";
 import { FlipWords } from "../components/FlipWords";
 import { motion } from "framer-motion";
-import Card from "../components/style";
-import SunsetStlye from "../components/SunsetStyle";
+
 
 const Hero = () => {
   return (
