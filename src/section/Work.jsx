@@ -213,7 +213,7 @@ const Work = () => {
               src="/logo/Coca UI122.jpg"
               style={{
                 width: "800px",
-                height: "409px",
+                height: "403px",
                 margin: "0 auto",
               }}
             />
@@ -228,7 +228,7 @@ const Work = () => {
             id="naek"
           >
             <img
-              src="/logo/IrishWreckk.jpg"
+              src="/dist/logo/IrishWreckk.jpg"
               style={{
                 width: "800px",
                 margin: "0 auto",
