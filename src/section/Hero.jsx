@@ -36,16 +36,20 @@ const Hero = () => {
       {/* Video Hero */}
       <section className="absolute inset-0 -z-0 w-full">
         <video
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        style={{ willChange: "opacity" }}
-        src="public/video/videoHeroo.mp4"
-      >
-      </video>
+  className="absolute inset-0 w-full h-full object-cover -z-10"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  crossOrigin="anonymous"
+>
+  <source
+    src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760462786/VideoHeroo_eie45e.mp4"
+    type="video/mp4"
+  />
+</video>
+
       {/* dark overlay for readability */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none -z-5" />
       </section>
