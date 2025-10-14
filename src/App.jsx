@@ -4,7 +4,7 @@ import Hero from "./section/Hero";
 import About from "./section/About";
 import Work from "./section/Work";
 import Contact from "./section/Contact";
-import Footer from "./section/Footer";
+import Footer from "./section/Footer1"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LearnPage from "./section/LearnPage";
 import Skill from "./section/Skill";
