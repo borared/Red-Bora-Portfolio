@@ -4,7 +4,7 @@ import Hero from "./section/Hero";
 import About from "./section/About";
 import Work from "./section/Work";
 import Contact from "./section/Contact";
-import Footer from "./section/footer";
+import Footer from "./section/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LearnPage from "./section/LearnPage";
 import Skill from "./section/Skill";
@@ -22,7 +22,7 @@ const App = () => {
               <Hero />
               <About />
               <Work />
-              <Skill/>
+              <Skill />
               <Contact />
               <Footer />
             </div>
