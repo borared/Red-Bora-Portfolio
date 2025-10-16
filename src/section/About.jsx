@@ -7,12 +7,14 @@ const About = () => {
   const aboutRef = useRef(null);
   const isInView = useInView(aboutRef, { once: true, margin: "-100px" });
   const navigate = useNavigate();
+  const meRef = useRef(null);
 
   const aboutInfoRef = useRef(null);
   const isAboutInfoInView = useInView(aboutInfoRef, {
     once: true,
     margin: "-100px",
   });
+  const ismeInview = useInView(meRef, {once: true, margin: "-100px"});
 
   return (
     <>
@@ -25,7 +27,7 @@ const About = () => {
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="-mt-20 md:mt-5 font-bold md:text-left px-17 hidden sm:block w-screen"
       >
-        <h2 className=" text-white text-2xl">About me</h2>
+        <h2 className=" text-white text-2xl sm:mt-25">About me</h2>
         <hr className="text-neutral-400 mt-2 hidden sm:block" />
         {/* Image */}
         <section className="inset-0 -z-0">
@@ -36,7 +38,7 @@ const About = () => {
             >
               <motion.p
                 id="memove"
-                className="text-white text-9xl font-normal whitespace-nowrap"
+                className="text-white text-9xl font-normal whitespace-nowrap sm:text-9xl sm:-mt-20"
                 animate={{ x: [800, -2000] }}
                 transition={{
                   x: {
@@ -53,10 +55,11 @@ const About = () => {
             </motion.div>
             <motion.div
               id="me"
+
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-              className="absolute inset-0 w-full h-screen -z-40 flex items-center justify-center mt-20"
+              className="absolute inset-0 w-full h-screen -z-40 flex items-center justify-center mt-20 sm:-mt-7 md:mt-20"
               style={{ background: "none" }}
             >
               <img
@@ -72,6 +75,8 @@ const About = () => {
                 }}
               />
             </motion.div>
+
+            
           </div>
         </section>
 
@@ -98,35 +103,62 @@ const About = () => {
             
             
           </div>
-          <div className="mt-35">
-            <p className="text-white justify-center  text-5xl mt-10 font-normal flex">
+          <div className="sm:-mt-58 md:mt-5 sm:text-1xl xl:mt-25">
+            <p className="text-white justify-center  text-2xl mt-10 font-normal flex sm:text-2xl md:text-3xl xl:text-4xl whitespace-nowrap">
               [ Red Bora | 18y | A Junior Software Engineer ]
             </p>
-            <p className="text-neutral-600 text-2xl mt-3 font-normal flex justify-center">
-              I’m a passionate software engineer dedicated to building impactful
-              technologies that
-            </p>
-            <p className="text-neutral-600 text-2xl font-normal flex justify-center"> solve real-world problems. With a focus on AI and innovation, I
-              strive to empower</p>
-              <p className="text-neutral-600 text-2xl font-normal flex justify-center"> communities and contribute to the growth of Cambodia’s tech
-              ecosystem.</p>
+
+            {/* MD & LG version */}
+
+
+{/* XL version */}
+
+<div className="hidden xl:block text-neutral-400 font-normal space-y-3 text-2xl">
+   <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>I’m a passionate software engineer dedicated to building impactful
+                  technologies that</p>
+              </div>
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>solve real-world problems. With a focus on AI and innovation, I strive to  empower</p>
+              </div>
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>communities and contribute to the growth of Cambodia’s tech
+                  ecosystem.</p>
+              </div>
+</div>
+            <div className="hidden md:block  sm:block xl:hidden sm:whitespace-nowrap">
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>I’m a passionate software engineer dedicated to building impactful
+                  technologies that</p>
+              </div>
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>solve real-world problems. With a focus on AI and innovation, I strive to  empower</p>
+              </div>
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>communities and contribute to the growth of Cambodia’s tech
+                  ecosystem.</p>
+              </div>
+            </div>
+
+            
+            
             <div className="flex justify-center mt-10">
               <button
                 id="learnbtn1"
-                className="bg-black text-white font-semibold px-6 py-3 rounded-lg transition-all mb-8"
+                className="bg-black text-white font-normal px-6 py-3 rounded-lg transition-all mb-8"
                 onClick={() => navigate("/learnpage")}
               >
                 Learn more about me
               </button>
           </div>
-          </div>
+          </div> 
         </motion.div>
       </motion.section>
 
       {/* Mobile View */}
       <section
         id="about"
-        className="z-10 -mt-25 md:mt-20 md:text-left sm:hidden text-center px-7"
+        className="z-10 mt-10 md:mt-20 md:text-left sm:hidden text-center px-7"
       >
         <h2
           className="text-white font-bold
@@ -136,19 +168,27 @@ const About = () => {
         </h2>
         <hr className="text-neutral-400 mt-2 sm:hidden" />
         <div>
-          <section className="inset-0 -z-0 -mt-30">
+          <section className="inset-0 -z-0">
+            <div>
+          <p className="text-white mt-6 text-3xl font-bold flex justify-center">
+            Who Am I?
+          </p>
+          </div>
             <div className="relative w-full h-full flex items-center justify-center">
+
+              
               <motion.div
+                ref={meRef}
                 initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 4.5 }}
-                className="absolute inset-0 w-full h-screen -z-50 flex items-center justify-center"
+                animate={ismeInview ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 1 }}
+                className="absolute inset-0 w-full h-screen -z-40 flex items-center justify-center -mt-45"
                 style={{
                   background: "none",
                 }}
               >
                 <img
-                  src="/logo/redbora.png"
+                  src="/logo/RedBB.png"
                   alt="Background"
                   style={{
                     height: "100vh",
@@ -157,48 +197,75 @@ const About = () => {
                     objectPosition: "center",
                     display: "block",
                     margin: "0 auto",
+                   
                   }}
                 />
               </motion.div>
 
+              <div className="mt-95">
+                <div>
+                <p className="text-white" id="titleAbout">[ Red Bora | 18y | A Junior Software Engineer ]</p>
+              </div>
+              <div className="text-neutral-400 font-normal hidden md:block" id="aboutletter">
+              <p>I’m a passionate software engineer dedicated to building impactful
+                  technologies that solve real-world problems. With a focus on AI and innovation, I strive to  empower
+                  communities and contribute to the growth of Cambodia’s tech
+                  ecosystem.</p>
+              </div>
+              
+              </div>
+
+              
+
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 5 }}
-                className="absolute inset-0 w-full h-screen -z-40 flex items-center justify-center"
-                style={{
-                  background: "none",
+              className="absolute inset-0 w-full h-screen -z-50 flex items-center justify-center -mt-39"
+              style={{ background: "none" }}
+            >
+              <motion.p
+                id="memove1"
+                className="text-white text-8xl font-normal whitespace-nowrap"
+                animate={{ x: [800, -2000] }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 30,
+                    ease: "linear",
+                  },
                 }}
+                style={{ willChange: "transform" }}
               >
-                <img
-                  src="/logo/RBRR.png"
-                  alt="Background"
-                  style={{
-                    height: "100vh",
-                    width: "auto",
-                    objectFit: "contain",
-                    objectPosition: "center",
-                    display: "block",
-                    margin: "0 auto",
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                />
-              </motion.div>
+                This is Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora - Red Bora
+              </motion.p>
+            </motion.div>
+
+            
+            
             </div>
           </section>
         </div>
 
-        <div className="mt-150">
+        <div className="mt-5">
           <button
             id="learnbtn"
-            className="bg-black text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 hover:text-black transition-all"
+            className="bg-white text-black px-6 py-3 rounded-lg  transition-all"
             onClick={() => navigate("/learnpage")}
           >
             Learn more about me
           </button>
         </div>
+
+
+        
       </section>
     </>
   );
 };
 export default About;
+
+
+
+
+
+
+

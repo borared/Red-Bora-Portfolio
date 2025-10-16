@@ -43,7 +43,7 @@ const LearnPage = () => {
       </div>
 
       <div>
-        <h1 className="text-3xl text-neutral-500 px-36 mt-10 flex justify-center">
+        <h1 className="text-3xl text-neutral-500 px-36 mt-10 flex justify-center whitespace-nowrap">
           Education Journey
         </h1>
       </div>
@@ -65,33 +65,60 @@ const LearnPage = () => {
         <div className="absolute inset-0 bg-black/40 z-[5] pointer-events-none" />
 
         {/* Text overlays */}
-        <h1 className="absolute left-10 top-62 text-white text-3xl font-bold z-10">
-          Bachelor of Computer Science
-        </h1>
-        <h1 className="absolute left-10 top-73 text-white text-2xl font-normal z-10">
-          Cambodia Academy of Digital Technology (CADT)
-        </h1>
-
-        <div className="flex gap-3">
-          <h1
-            id="specialize"
-            className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
-          >
-            Specialize: Software Engineer
+        <div className="hidden sm:block">
+          <h1 className="absolute left-10 top-62 text-white text-3xl font-bold z-10">
+            Bachelor of Computer Science
           </h1>
+          <h1 className="absolute left-10 top-73 text-white text-2xl font-normal z-10">
+            Cambodia Academy of Digital Technology (CADT)
+          </h1>
+            <div className="flex gap-3">
+              <h1
+                id="specialize"
+                className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+              >
+                Specialize: Software Engineer
+              </h1>
+              <h1
+                id="specialize"
+                className="absolute left-75 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+              >
+                Focus: Full Stack Development
+              </h1>
+            </div>
+          
+          <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
+            2024 - Present
+          </h1>
+                </div>
 
-          <h1
-            id="specialize"
-            className="absolute left-75 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
-          >
-            Focus: Full Stack Development
+
+                <h1 className="absolute left-10 top-50 text-white text-3xl font-bold z-10">
+            Bachelor of Computer Science
+          </h1>
+          <h1 className="absolute left-10 top-60 text-white text-2xl font-normal z-10">
+            Cambodia Academy of Digital Technology (CADT)
+          </h1>
+            
+    
+               <h1
+                
+                className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+              >
+                Specialize: Software Engineer
+              </h1>
+              
+                
+              
+            
+          
+          <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
+            2024 - Present
           </h1>
         </div>
 
-        <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
-          2024 - Present
-        </h1>
-      </div>
+
+        
 
       {/* Image + Text container */}
       <div className="relative w-full h-[450px] overflow-hidden mt-2 group">

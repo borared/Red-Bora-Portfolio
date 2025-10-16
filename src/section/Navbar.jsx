@@ -21,7 +21,7 @@ function Navigation() {
   };
 
   return (
-    <ul className="nav-ul flex flex-col sm:flex-row px-4 space-y-4 sm:space-y-0 sm:space-x-20 font-semibold transition-colors">
+    <ul className="nav-ul flex flex-col sm:flex-row px-4 space-y-4 sm:space-y-0 sm:space-x-10 md:space-x-20 xl:space-x-20 font-semibold transition-colors">
       {[
         { id: "home", label: "Home" },
         { id: "about", label: "About" },

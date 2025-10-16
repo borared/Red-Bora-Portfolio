@@ -56,18 +56,7 @@ const Contact = () => {
       id="contact"
       className="w-screen px-15 relative overflow-hidden mt-15 min-h-screen"
     >
-      {/* video background - optimized for smoothness */}
-      {/* <video
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        style={{ willChange: "opacity" }}
-      >
-        <source src="/video/videoM.mp4" type="video/mp4" />
-      </video> */}
+      
       <img 
       className="absolute inset-0 w-full h-full object-cover -z-10"
       src="/logo/Inovation.jpg" alt="" />
@@ -89,10 +78,11 @@ const Contact = () => {
           <hr />
         </div>
 
-        <div className="flex justify-center font-semibold text-3xl text-orange-500 mt-10">
-          <p className="text-white mt-6 text-5xl font-bold flex justify-center">
-            Want Your Project Comes to Life?
-          </p>
+        <div className="flex justify-center font-semibold text-orange-500 mt-10">
+          <p className="text-white mt-6 font-bold flex justify-center text-center text-2xl sm:text-4xl md:text-4xl xl:text-5xl sm:whitespace-nowrap">
+  Want Your Project Comes to Life?
+</p>
+
         </div>
 
         <motion.div
@@ -171,6 +161,84 @@ const Contact = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      <div className="sm:hidden">
+          <p className="text-white mt-6 font-bold flex justify-center text-center text-2xl whitespace-nowrap">
+            Want Your Project Comes to Life?
+          </p>
+
+
+          <div className="wrapper">
+            <div className="text-white object-center flex justify-center">
+              <form onSubmit={handleSubmit}>
+                <div className="chat">
+                  <h2 className="let">Let's get in touch</h2>
+                  <div className="InputName">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your full name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
+                    <div className="text-neutral-400">
+                      {" "}
+                      <hr />
+                    </div>
+                  </div>
+
+                  <div></div>
+                  <div className="Input">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="text-neutral-400">
+                    {" "}
+                    <hr />
+                  </div>
+                  <div>
+                    <h2 className="message">Message me</h2>
+                    <div className="int">
+                      <textarea
+                        className="sms"
+                        name="message"
+                        placeholder="Tell me about your project...."
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
+                        style={{
+                          width: 340,
+                          height: 300,
+                        }}
+                      />
+                      <div className="btn">
+                        <button>
+                          {!isLoading ? "" : ""}
+                          <Sent />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="Social">
+                  <div id="Ssocial" className="flex justify-center ">
+                    <Button />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+      </div>
 
       {/* video background moved above, nothing needed here */}
       <p className="mt-25"></p>

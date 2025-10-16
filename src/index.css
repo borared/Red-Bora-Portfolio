@@ -211,6 +211,7 @@ body {
 
 #endfooter{
     margin-top: 40px;
+    font-size: 14px;
 }
 
 #learnbtn1{
@@ -242,7 +243,8 @@ body {
 #or{
     display: flex;
     justify-items: center;
-    align-items: centerw;
+    align-items: center;
+    font-size: 13px;
 }
 
 #frontend{
@@ -305,7 +307,7 @@ body {
 }
 
 #memove{
-    font-size: 300px
+    font-size: 255px
 }
 
 #Mac{
@@ -356,4 +358,14 @@ body {
 
 #Coca{
     transition: all 0.3s ease-in-out;
+}
+
+#aboutletter{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#titleAbout{
+    font-size: 20px;
 }

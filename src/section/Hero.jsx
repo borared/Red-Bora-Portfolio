@@ -63,7 +63,11 @@ const Hero = () => {
           I'm a <span> </span>
           <FlipWords
             words={["Web Developer", "UX/UI Designer", "Frontend Developer"]}
-            className="text-3xl font-black text-white"
+            className="text-3xl font-black text-white hidden sm:block"
+          />
+          <FlipWords
+            words={["Web Developer", "UX/UI Designer", "Frontend Developer"]}
+            className="text-3xl font-black text-white flex justify-center "
           />
         </p>
         <p className="text-2xl font-semibold text-white mt-3" id="text">

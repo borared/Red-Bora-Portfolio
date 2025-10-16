@@ -191,3 +191,4 @@ const NaekDetail = ({ onClose }) => {
 export default NaekDetail;
 
 //Naek Watch is a prototype movie platform built to deliver a seamless and customizable viewing experience. It enables users to easily find and watch the movies they want through advanced filtering options, while also offering features such as release notifications for upcoming HD titles and personalized recommendations.
+
