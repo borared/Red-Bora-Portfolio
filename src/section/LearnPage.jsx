@@ -93,28 +93,29 @@ const LearnPage = () => {
                 </div>
 
 
-                <h1 className="absolute left-10 top-50 text-white text-3xl font-bold z-10">
-            Bachelor of Computer Science
-          </h1>
-          <h1 className="absolute left-10 top-60 text-white text-2xl font-normal z-10">
-            Cambodia Academy of Digital Technology (CADT)
-          </h1>
-            
-    
-               <h1
-                
-                className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
-              >
-                Specialize: Software Engineer
-              </h1>
-              
-                
-              
-            
-          
-          <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
-            2024 - Present
-          </h1>
+                <div className="sm:hidden">
+                  <h1 className="absolute left-10 top-50 text-white text-3xl font-bold z-10">
+                              Bachelor of Computer Science
+                            </h1>
+                            <h1 className="absolute left-10 top-60 text-white text-2xl font-normal z-10">
+                              Cambodia Academy of Digital Technology (CADT)
+                            </h1>
+                              
+                      
+                                 <h1
+                  
+                  className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+                                >
+                  Specialize: Software Engineer
+                                </h1>
+                  
+                                
+                              
+                            
+                            <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
+                              2024 - Present
+                            </h1>
+                </div>
         </div>
 
 
@@ -233,32 +234,53 @@ const LearnPage = () => {
         <div className="absolute inset-0 bg-black/40 z-[5] pointer-events-none" />
 
         {/* Text overlays */}
-        <h1 className="absolute left-10 top-62 text-white text-3xl font-bold z-10">
-          Next-Gen Engagement Program - Batch II
-        </h1>
-        <h1 className="absolute left-10 top-73 text-white text-2xl font-normal z-10">
-          Cambodia Academy of Digital Technology (CADT)
-        </h1>
-
-        <div className="flex gap-3">
-          <h1
-            id="specialize"
-            className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
-          >
-            Focus: Web Development
+        <div className="sm:hidden">
+          <h1 className="absolute left-10 top-55 text-white text-3xl font-bold z-10">
+            Next-Gen Engagement Program - Batch II
           </h1>
-
-          <h1
-            id="specialize"
-            className="absolute left-73 top-85 text-blue-800 w-50 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
-          >
-            Get Along with Senior
+          <h1 className="absolute left-10 top-73 text-white text-2xl font-normal z-10">
+            Cambodia Academy of Digital Technology (CADT)
+          </h1>
+          <div className="flex gap-3">
+            <h1
+              id="specialize"
+              className="absolute left-10 top-91 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+            >
+              Focus: Web Development
+            </h1>
+            
+          </div>
+          <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
+            5 weeks (Aug-Sep 2025)
           </h1>
         </div>
 
-        <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
-          5 weeks (Aug-Sep 2025)
-        </h1>
+
+        <div className="hidden sm:block">
+          <h1 className="absolute left-10 top-62 text-white text-3xl font-bold z-10">
+            Next-Gen Engagement Program - Batch II
+          </h1>
+          <h1 className="absolute left-10 top-73 text-white text-2xl font-normal z-10">
+            Cambodia Academy of Digital Technology (CADT)
+          </h1>
+          <div className="flex gap-3">
+            <h1
+              id="specialize"
+              className="absolute left-10 top-85 text-blue-800 w-60 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+            >
+              Focus: Web Development
+            </h1>
+            <h1
+              id="specialize"
+              className="absolute left-73 top-85 text-blue-800 w-50 flex justify-center items-center rounded-2xl bg-blue-200 text-1xl font-normal z-10"
+            >
+              Get Along with Senior
+            </h1>
+          </div>
+          <h1 className="absolute bottom-5 left-10 text-white text-3xl font-bold z-10">
+            5 weeks (Aug-Sep 2025)
+          </h1>
+        </div>
       </div>
 
       <footer id="footer" className="w-screen py-5 mt-15">

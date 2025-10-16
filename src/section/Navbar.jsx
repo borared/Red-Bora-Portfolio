@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function Navigation() {
+function Navigation({ onLinkClick }) {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -13,8 +13,10 @@ function Navigation() {
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 200); // slightly safer
+      }, 200);
     } else {
+      // ✅ Close mobile menu first so scroll works
+      if (onLinkClick) onLinkClick(); 
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }
@@ -60,10 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className="fixed inset-x-0 z-20 bg-transparent w-full px-6"
-      
-    >
+    <div className="fixed inset-x-0 z-20 bg-transparent w-full px-6">
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-12">
           <a
@@ -102,7 +101,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-12 left-0 w-full z-20 text-neutral-500 backdrop-blur-lg transition-all"
+            className="sm:hidden fixed top-12 left-0 w-full z-20 text-neutral-500 backdrop-blur-sm transition-all"
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, x: 10 }}
@@ -110,7 +109,8 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col items-center py-6">
-              <Navigation />
+              {/* ✅ Pass setIsOpen(false) to close on mobile */}
+              <Navigation onLinkClick={() => setIsOpen(false)} />
             </nav>
           </motion.div>
         )}
