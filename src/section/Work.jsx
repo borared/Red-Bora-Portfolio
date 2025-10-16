@@ -19,6 +19,9 @@ const Work = () => {
   const mojoRef = useRef(null);
   const cocaRef = useRef(null);
   const irishRef = useRef(null);
+  const cambodia2Ref = useRef(null);
+  const qoute2Ref = useRef(null);
+  const iphone2Ref = useRef(null);
 
   // === Mobile-only refs (new) ===
   const workMobileRef = useRef(null);
@@ -55,6 +58,11 @@ const Work = () => {
   const mojoMobileInView = useInView(mojoMobileRef, { once: true, margin: "-100px" });
   const cocaMobileInView = useInView(cocaMobileRef, { once: true, margin: "-100px" });
   const irishMobileInView = useInView(irishMobileRef, { once: true, margin: "-100px" });
+  
+  //=== Table useInview triggers ===
+  const cambodia2Inview = useInView(cambodia2Ref, { once: true, margin: "-100px" });
+  const qoute2Inview = useInView(qoute2Ref, { once: true, margin: "-100px" });
+  const iphone2Inview = useInView(iphone2Ref, { once: true, margin: "-100px" });
 
   return (
     <section className="w-screen px-17 bg-black sm:mt-15" id="work" ref={workRef}>
@@ -83,60 +91,119 @@ const Work = () => {
           <h2>Poster Designing</h2>
         </motion.div>
 
-        <div className="flex justify-center gap-15">
-          <motion.div
-            ref={CambodiaRef}
-            initial={{ opacity: 0, y: 60 }}
-            animate={CambodiaInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="flex mt-10 mb-10 flex-wrap"
-            id="Work"
-          >
-            <img
-              src="/logo/Cambodia.jpg"
-              alt="Cambodia"
-              style={{
-                width: "250px",
-                margin: "0 auto",
-              }}
-            />
-          </motion.div>
+        <div className="hidden xl:block">
+          <div className="flex justify-center gap-15">
+            <motion.div
+              ref={CambodiaRef}
+              initial={{ opacity: 0, y: 60 }}
+              animate={CambodiaInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/Cambodia.jpg"
+                alt="Cambodia"
+                style={{
+                  width: "250px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+            <motion.div
+              ref={iphoneRef}
+              initial={{ opacity: 0, y: 60 }}
+              animate={iphoneInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/Iphone.jpg"
+                alt="Iphone"
+                style={{
+                  width: "600px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+            <motion.div
+              ref={qouteRef}
+              initial={{ opacity: 0, y: 60 }}
+              animate={qouteInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/qoute.jpg"
+                alt="Qoute"
+                style={{
+                  width: "250px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+          </div>
+        </div>
 
-          <motion.div
-            ref={iphoneRef}
-            initial={{ opacity: 0, y: 60 }}
-            animate={iphoneInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-            className="flex mt-10 mb-10 flex-wrap"
-            id="Work"
-          >
-            <img
-              src="/logo/Iphone.jpg"
-              alt="Iphone"
-              style={{
-                width: "600px",
-                margin: "0 auto",
-              }}
-            />
-          </motion.div>
 
-          <motion.div
-            ref={qouteRef}
-            initial={{ opacity: 0, y: 60 }}
-            animate={qouteInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
-            className="flex mt-10 mb-10 flex-wrap"
-            id="Work"
-          >
-            <img
-              src="/logo/qoute.jpg"
-              alt="Qoute"
-              style={{
-                width: "250px",
-                margin: "0 auto",
-              }}
-            />
-          </motion.div>
+        <div className="xl:hidden">
+          <div className="justify-center gap-15">
+            <motion.div
+              ref={cambodia2Ref}
+              initial={{ opacity: 0, y: 60 }}
+              animate={cambodia2Inview ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/Cambodia.jpg"
+                alt="Cambodia"
+                style={{
+                  width: "250px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+            
+            <motion.div
+              ref={qoute2Ref}
+              initial={{ opacity: 0, y: 60 }}
+              animate={qoute2Inview ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/qoute.jpg"
+                alt="Qoute"
+                style={{
+                  width: "250px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+
+            <motion.div
+              ref={iphone2Ref}
+              initial={{ opacity: 0, y: 60 }}
+              animate={iphone2Inview ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              className="flex mt-10 mb-10 flex-wrap"
+              id="Work"
+            >
+              <img
+                src="/logo/Iphone.jpg"
+                alt="Iphone"
+                style={{
+                  width: "600px",
+                  margin: "0 auto",
+                }}
+              />
+            </motion.div>
+          </div>
         </div>
 
         <div className="flex justify-center">
@@ -151,9 +218,9 @@ const Work = () => {
               src="https://res.cloudinary.com/dicrvjstp/image/upload/v1760497281/Cadt_Hang_riubcd.jpg"
               alt=""
               style={{
-                width: "700px",
+                width: "600px",
               }}
-              className="flex justify-end"
+              className="flex justify-end mb-10"
             />
           </motion.div>
         </div>
@@ -204,7 +271,7 @@ const Work = () => {
       </motion.div>
 
       <div className="hidden sm:block">
-        <div className="text-neutral-300 mb-6 text-2xl flex justify-center">
+        <div className="text-neutral-300 mb-6 text-2xl flex justify-center mt-20">
           <p>School Project</p>
         </div>
         <motion.div
@@ -215,7 +282,7 @@ const Work = () => {
           className="flex justify-center"
         >
           <video
-            src="/video/MojoClothes.mp4"
+            src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760585543/MojoClothes_uwxd1s.mp4"
             autoPlay
             loop
             muted

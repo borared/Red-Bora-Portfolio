@@ -8,17 +8,21 @@ function Navigation({ onLinkClick }) {
 
   const handleNav = (e, id) => {
     e.preventDefault();
+
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 200);
+      }, 300);
     } else {
-      // ✅ Close mobile menu first so scroll works
-      if (onLinkClick) onLinkClick(); 
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      // ✅ Close the mobile menu first, then scroll after animation
+      if (onLinkClick) onLinkClick();
+
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 300); // wait for AnimatePresence exit transition
     }
   };
 
@@ -68,7 +72,7 @@ const Navbar = () => {
           <a
             href="/"
             onClick={handleHomeClick}
-            className="text-xl font-bold transition-colors text-white  px-4"
+            className="text-xl font-bold transition-colors text-white px-4"
           >
             © Red Bora.
           </a>
@@ -109,7 +113,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col items-center py-6">
-              {/* ✅ Pass setIsOpen(false) to close on mobile */}
+              {/* ✅ Close menu and scroll correctly on mobile */}
               <Navigation onLinkClick={() => setIsOpen(false)} />
             </nav>
           </motion.div>

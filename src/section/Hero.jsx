@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Desktop View */}
       <div className="z-10 mt-20 md:mt-40 md:text-left rounded-3xl bg-clip-text px-4 md:px-16 hidden sm:block w-full">
         <motion.h1
-          className="text-5xl font-semibold text-white  sm:text-4xl sm:mt-10 xl:text-5xl"
+          className="text-5xl font-semibold text-white  sm:text-3xl sm:mt-10 xl:text-5xl sm:px-0.5"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
@@ -30,7 +30,7 @@ const Hero = () => {
   
           <FlipWords
             words={["Web Developer", "UX/UI Designer", "Frontend Developer"]}
-            className="text-5xl font-black text-white sm:text-4xl sm:mt-50 xl:text-5xl"
+            className="text-5xl font-black text-white sm:text-3xl sm:mt-65 xl:text-5xl"
           />
         </motion.p>
       </div>
@@ -69,7 +69,7 @@ const Hero = () => {
           />
           <FlipWords
             words={["Web Developer", "UX/UI Designer", "Frontend Developer"]}
-            className="text-3xl font-black text-white flex justify-center "
+            className="text-3xl font-black text-white flex justify-center"
           />
         </p>
         

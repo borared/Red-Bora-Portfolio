@@ -15,31 +15,63 @@ const Footer = () => {
             interesting projects, or simply chat about technology and
             innovation.
           </p>
-          <div className="flex gap-2 justify-center text-1xl whitespace-nowrap">
-            <button
-              id="learnbtn"
-              className="bg-white text-black font-normal px-6 py-3 rounded-lg hover:text-black transition-all"
-              onClick={() => navigate("/learnpage")}
-            >
-              Learn more about me
-            </button>
-            <p id="or" className="font-normal text-white items-center sm:text-1xl md:text-1xl xl:text-1xl">
-              OR
-            </p>
-            <a
-              id="downloadbtn"
-              href="/Red Bora CV.pdf"
-              download="Red Bora CV.pdf"
-              className="bg-white text-black sm:text-1xl md:text-1xl font-normal px-6 py-3 rounded-lg hover:text-black transition-all flex items-center justify-center gap-2"
-            >
-              <img
-                src="/logo/icondownload.png"
-                alt="Download"
-                className="w-5 h-5"
-                id="downloadicon"
-              />
-              Download my resume
-            </a>
+          <div className="hidden sm:block">
+            <div className="flex gap-2 justify-center text-1xl whitespace-nowrap">
+              <button
+                id="learnbtn"
+                className="bg-white text-black font-normal px-6 py-3 rounded-lg hover:text-black transition-all"
+                onClick={() => navigate("/learnpage")}
+              >
+                Learn more about me
+              </button>
+              <p id="or" className="font-normal text-white items-center sm:text-1xl md:text-1xl xl:text-1xl">
+                OR
+              </p>
+              <a
+                id="downloadbtn"
+                href="/Red Bora CV.pdf"
+                download="Red Bora CV.pdf"
+                className="bg-white text-black sm:text-1xl md:text-1xl font-normal px-6 py-3 rounded-lg hover:text-black transition-all flex items-center justify-center gap-2"
+              >
+                <img
+                  src="/logo/icondownload.png"
+                  alt="Download"
+                  className="w-5 h-5"
+                  id="downloadicon"
+                />
+                Download my resume
+              </a>
+            </div>
+          </div>
+
+
+          <div className="sm:hidden">
+            <div className="justify-center text-1xl whitespace-nowrap">
+              <button
+                id="learnbtnFooter"
+                className="bg-white text-black font-normal px-6 py-3 rounded-lg hover:text-black transition-all"
+                onClick={() => navigate("/learnpage")}
+              >
+                Learn more about me
+              </button>
+              
+              <div className="flex justify-center">
+                <a
+                  id="downloadbtn1"
+                  href="/Red Bora CV.pdf"
+                  download="Red Bora CV.pdf"
+                  className="bg-white text-black sm:text-1xl md:text-1xl font-normal px-6 py-3 rounded-lg hover:text-black transition-all flex items-center justify-center gap-2 mt-3"
+                >
+                  <img
+                    src="/logo/icondownload.png"
+                    alt="Download"
+                    className="w-5 h-5"
+                    id="downloadicon"
+                  />
+                  Download my resume
+                </a>
+              </div>
+            </div>
           </div>
           <div id="endfooter">
             <p className="text-neutral-400 sm:text-1xl md:text-1xl xl:text-1xl">

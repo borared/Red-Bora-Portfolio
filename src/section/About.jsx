@@ -202,7 +202,7 @@ const About = () => {
                 />
               </motion.div>
 
-              <div className="mt-95">
+              <div className="mt-105">
                 <div>
                 <p className="text-white" id="titleAbout">[ Red Bora | 18y | A Junior Software Engineer ]</p>
               </div>

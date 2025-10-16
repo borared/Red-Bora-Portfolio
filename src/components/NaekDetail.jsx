@@ -84,7 +84,7 @@ const NaekDetail = ({ onClose }) => {
             
               <div className="flex gap-2">
                 <motion.h1
-                  className=" text-purple-300"
+                  className=" text-blue-300"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.35 }}
@@ -92,7 +92,7 @@ const NaekDetail = ({ onClose }) => {
                   <div id="school">Next Gen Batch 2nd Project</div>
                 </motion.h1>
                 <motion.h1
-                  className=" text-purple-300"
+                  className=" text-blue-300"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.25 }}
@@ -106,34 +106,69 @@ const NaekDetail = ({ onClose }) => {
 
           <div className="flex gap-119">
             <div className="md:mt-5 md:text-left bg-clip-text px-4 hidden sm:block">
-              <motion.h1
-                className="text-1xl text-neutral-300"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                Naek Watch is a prototype movie platform built to deliver service
-                of movie watching experience.
-              </motion.h1>
-              <motion.h1
-                className="text-1xl text-neutral-300"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.9 }}
-              >
-                It enables users to easily find and watch the movies they want
-                through advanced filtering options,
-              </motion.h1>
-              <motion.h1
-                className="text-1xl text-neutral-300"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.4 }}
-              >
-                while also offering features such as release notifications for
-                upcoming HD titles and personalized
-                <br /> recommendations.
-              </motion.h1>
+              <div className="sm:hidden md:block">
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  Naek Watch is a prototype movie platform built to deliver service
+                  of movie watching experience.
+                </motion.h1>
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.9 }}
+                >
+                  It enables users to easily find and watch the movies they want
+                  through advanced filtering options,
+                </motion.h1>
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.4 }}
+                >
+                  while also offering features such as release notifications for
+                  upcoming HD titles and personalized
+                  <br /> recommendations.
+                </motion.h1>
+              </div>
+
+
+              <div className="md:hidden xl:hidden sm:mt-3">
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  Naek Watch is a prototype movie platform built to deliver service
+                  of movie watching experience.
+                  It enables users to easily find and watch the movies they want
+                  through advanced filtering options,while also offering features such as release notifications for
+                  upcoming HD titles and personalized recommendations.
+                </motion.h1>
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.9 }}
+                >
+                  
+                </motion.h1>
+                <motion.h1
+                  className="text-1xl text-neutral-300"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.4 }}
+                >
+                  
+                  <br /> 
+                </motion.h1>
+              </div>
 
               <div>
               <motion.h1
@@ -146,7 +181,7 @@ const NaekDetail = ({ onClose }) => {
               </motion.h1>
               <div className="flex gap-2">
                   <motion.h1
-                    className=" text-purple-300"
+                    className=" text-blue-300"
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 2 }}
@@ -154,7 +189,7 @@ const NaekDetail = ({ onClose }) => {
                     <div id="tool">Figma</div>
                   </motion.h1>
                   <motion.h1
-                    className=" text-purple-300"
+                    className=" text-blue-300"
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.7 }}
@@ -165,7 +200,7 @@ const NaekDetail = ({ onClose }) => {
           </div>
             </div>
 
-            <div className="w-65 hidden sm:block ">
+            <div className="w-65 hidden xl:block">
               <motion.div
                           initial={{ opacity: 0, x: 50 }}
                           animate={{ opacity: 1, x: 0 }}

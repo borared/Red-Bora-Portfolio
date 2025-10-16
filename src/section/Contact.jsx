@@ -68,9 +68,9 @@ const Contact = () => {
         initial={{ opacity: 0, y: 80 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="items-start px-4 hidden sm:block relative z-10"
+        className="items-start px-4 relative z-10"
       >
-        <div className="z-10 -mt-20 md:mt-5 font-bold md:text-left text-white text-2xl ">
+        <div className="z-10 -mt-20 md:mt-5 font-bold md:text-left text-white text-2xl">
           <h2>Contact</h2>
         </div>
 
@@ -79,7 +79,7 @@ const Contact = () => {
         </div>
 
         <div className="flex justify-center font-semibold text-orange-500 mt-10">
-          <p className="text-white mt-6 font-bold flex justify-center text-center text-2xl sm:text-4xl md:text-4xl xl:text-5xl sm:whitespace-nowrap">
+          <p className="text-white mt-6 font-bold flex justify-center text-center text-2xl sm:text-4xl md:text-4xl xl:text-5xl sm:whitespace-nowrap whitespace-nowrap">
   Want Your Project Comes to Life?
 </p>
 
@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="wrapper">
             <div className="text-white object-center flex justify-center">
               <form onSubmit={handleSubmit}>
-                <div className="chat">
+                <div className="chat ">
                   <h2 className="let">Let's get in touch</h2>
                   <div className="InputName">
                     <input
@@ -162,83 +162,7 @@ const Contact = () => {
         </motion.div>
       </motion.div>
 
-      <div className="sm:hidden">
-          <p className="text-white mt-6 font-bold flex justify-center text-center text-2xl whitespace-nowrap">
-            Want Your Project Comes to Life?
-          </p>
-
-
-          <div className="wrapper">
-            <div className="text-white object-center flex justify-center">
-              <form onSubmit={handleSubmit}>
-                <div className="chat">
-                  <h2 className="let">Let's get in touch</h2>
-                  <div className="InputName">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Enter your full name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
-                    <div className="text-neutral-400">
-                      {" "}
-                      <hr />
-                    </div>
-                  </div>
-
-                  <div></div>
-                  <div className="Input">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Enter your email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="text-neutral-400">
-                    {" "}
-                    <hr />
-                  </div>
-                  <div>
-                    <h2 className="message">Message me</h2>
-                    <div className="int">
-                      <textarea
-                        className="sms"
-                        name="message"
-                        placeholder="Tell me about your project...."
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        style={{
-                          width: 340,
-                          height: 300,
-                        }}
-                      />
-                      <div className="btn">
-                        <button>
-                          {!isLoading ? "" : ""}
-                          <Sent />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="Social">
-                  <div id="Ssocial" className="flex justify-center ">
-                    <Button />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-
-
-      </div>
+      
 
       {/* video background moved above, nothing needed here */}
       <p className="mt-25"></p>

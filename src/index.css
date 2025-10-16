@@ -345,12 +345,26 @@ body {
 }
 
 #downloadbtn{
+    
+    width: 240px;
      border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
 
 #downloadbtn:hover{
-    box-shadow: solid rgba(239, 237, 250, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#downloadbtn1{
+    
+    width: 350px;
+     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#downloadbtn1:hover{
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
     cursor: pointer;
@@ -368,4 +382,18 @@ body {
 
 #titleAbout{
     font-size: 20px;
+}
+#maccc{
+    width: 520px;
+}
+
+#learnbtnFooter{
+    width: 350px;
+     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+#learnbtnFooter:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
