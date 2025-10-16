@@ -370,7 +370,7 @@ const Work = () => {
           className="flex justify-center"
         >
           <video
-            src="/video/MojoClothes.mp4"
+            src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760585543/MojoClothes_uwxd1s.mp4"
             autoPlay
             loop
             muted
