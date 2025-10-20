@@ -292,6 +292,22 @@ const Work = () => {
             className="w-200"
           ></video>
         </motion.div>
+
+        <div className="flex justify-center mt-20"
+        >
+          <video
+            src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760939924/Screen_Recording_2025-10-20_125551_pfwiri.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            style={{ willChange: "opacity" }}
+            className="w-200"
+          ></video>
+        </div>
+
+
       </div>
 
       <div className="flex gap-1">
@@ -446,7 +462,29 @@ const Work = () => {
             style={{ willChange: "opacity" }}
             className="w-[85vw] max-w-[600px] object-contain mx-auto"
           ></video>
+
         </motion.div>
+
+        <motion.div
+          ref={mojoMobileRef}
+          initial={{ opacity: 0, y: 60 }}
+          animate={mojoMobileInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          className="flex justify-center"
+        >
+          <video
+            src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760939924/Screen_Recording_2025-10-20_125551_pfwiri.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            style={{ willChange: "opacity" }}
+            className="w-[85vw] max-w-[600px] object-contain mx-auto mt-10"
+          ></video>
+
+        </motion.div>
+
 
         <motion.div
           ref={cocaMobileRef}
