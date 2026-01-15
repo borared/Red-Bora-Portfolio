@@ -18,7 +18,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
         >
-          Hi It's Bora
+          Hi It's Bora Red
         </motion.h1>
 
         <motion.p
